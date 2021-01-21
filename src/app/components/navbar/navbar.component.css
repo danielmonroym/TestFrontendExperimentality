@@ -1,0 +1,46 @@
+.logo {
+    width: 10%;
+    margin-left: 20%;
+}
+
+.searchbar{
+    margin-left: 5%;
+    width: 20%;
+    height: 40px;
+    border-radius: 5px;
+    background-color:#eeeeee;
+    border:none;
+    outline: none;
+    
+}
+
+input[type="text"]
+{
+    font-size:20px;
+    padding-left: 1% ;
+    color: #6b6b6b;
+}
+.icon{
+     
+        margin-left: 53.5%;
+        position: absolute;
+        color: #6b6b6b;
+}
+.cart{
+  width: 1.5%;
+  margin-left: 5%;
+
+}
+
+.usericon{
+    margin-left: 2.5%;
+    
+
+}
+
+.fa-lg{
+    color: #2f3232;
+}
+.init{
+     font-size:20px;
+}
