@@ -1,9 +1,56 @@
-<nav class="navbar navbar-expand-lg  ">
-    
-  <img src="../../../assets/logo.svg" class="logo">
+
+  
+
+    <nav class="navbar navbar-expand-lg  ">
+      <button class="navbar-toggler" (click)="openNav()">&#9776;
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+    <img src="../../../assets/logo.svg" class="logo">
    <input type="text" class="searchbar" placeholder="Buscar aquí producto"  ><span class="icon"><fa-icon [icon]="faSearch" class="fa-lg" ></fa-icon></span>
    <img src="../../../assets/icon-cart.svg" class="cart" >
    <span class="usericon"> <fa-icon [icon]="faUser" class="fa-lg" ></fa-icon></span>
-   <p class=" fa-lg mt-3 ms-2 init">Iniciar Sesión</p>
+   <p class=" fa-lg mt-3 ms-2 init">Iniciar Sesión</p> 
+
+   
+<div id="mySidebar" class="sidebar">
+        
+  <img src="../../../assets/icon-cancel.svg" class="cancel" (click)="closeNav()">
+  <h3 class="sidebar-text">Hombre</h3>
+  <h3 class="sidebar-text">Mujer</h3>
+  <h3 class="sidebar-text">Junior</h3>
+  <h3 class="sidebar-text"> Niños</h3>
+  <h3 class="sidebar-text">Accesorios</h3>
+  <h3 class="sidebar-text">Ofertas</h3>
+</div>
+
+  
+     </nav>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark categories-nav  ">
+    <div class="container prueba">
+        <div class="row">
+            <div class="col-2 brd" >
+                <h5 class="categories me-5">Hombre</h5>
+            </div>
+            <div class="col-2 brd">
+                <h5 class="categories">Mujer</h5>
+            </div>
+            <div class="col-2 brd">
+                <h5 class="categories">Junior</h5>
+            </div>
+            <div class="col-2 brd">
+                <h5 class="categories">Niños</h5>
+            </div>
+            <div class="col-3 brd ">
+                <h5 class="categories">Accesorios</h5>
+            </div>
+            <div class="col-1">
+                <h5 class="categories">Ofertas</h5>
+            </div>
+    
+        </div>
+    </div>
+    
   </nav>
- 

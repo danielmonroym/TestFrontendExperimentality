@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container webproducts">
     <h2 class="title mt-5">PRODUCTOS MÁS BUSCADOS</h2>
-  <div class="row">
+  <div class="row ">
   
    <span class=" arrowleft col-1 mt-5"> <fa-icon [icon]="faArrowLeft" class="fa-4x"  (click)="getPrevProducts()" ></fa-icon></span> 
     <div class="col-2 mt-5" *ngFor="let product of products">
@@ -37,4 +37,43 @@
     </div>
     <fa-icon [icon]="faArrowRight" class="fa-4x arrowright col-1 mt-5" (click)="getNextProducts()" ></fa-icon>
   </div>
+</div>
+<div class="container  mobileproducts">
+  <div class="row">
+  
+    <span class=" arrowleft col-2 "> <fa-icon [icon]="faArrowLeft" class="fa-lg"  (click)="getPrevProductsMobile()" ></fa-icon></span> 
+     <div class="col-6 mt-5 mx-2" *ngFor="let product of productsMobile">
+         
+       <div class="card card-style">
+         <img src="{{ product.thumbnail }}" class="img" alt="..." />
+         <div class="card-body">
+           <h6 class="card-title">{{ product.title }}</h6>
+           <div *ngIf="product.original_price != null; else templateName">
+               <div class="row">
+                   <div class="col">
+                     <p class="card-text discount" style="text-decoration: line-through;">{{product.price | currency:'COP':'symbol-narrow'}}</p> 
+                   </div>
+                   <div class="col price">
+                     <p>{{product.original_price | currency:'COP':'symbol-narrow'}}</p>
+                   </div>
+               </div>
+ 
+         </div>
+        
+ 
+           <ng-template #templateName>
+             <p class="card-text price">
+                 {{ product.price | currency: "COP":"symbol-narrow" }}
+                 
+               </p>
+         </ng-template>
+           
+          
+      
+      
+         </div>
+       </div>
+     </div>
+     <fa-icon [icon]="faArrowRight" class="fa-lg arrowright col-2" (click)="getNextProductsMobile()" ></fa-icon>
+   </div>
 </div>

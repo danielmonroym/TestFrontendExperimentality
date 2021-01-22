@@ -14,6 +14,11 @@ export class PopularproductsService {
     return this.http.get(`${this.URL}`+`${query}&category=MCO1430&limit=4`);
 
   }
+  getPopularProductsMobile(query): Observable<any> {
+    console.log(`${this.URL}`+`${query}&category=MCO1430&limit=1`);
+    return this.http.get(`${this.URL}`+`${query}&category=MCO1430&limit=1`);
+
+  }
 
   
 }

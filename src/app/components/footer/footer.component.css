@@ -10,6 +10,10 @@ h6{
     font-weight: lighter;
 }
 
+p{
+    color:white;
+    font-weight: lighter; 
+}
 .img{
     width: 50px;
      background-color:white;
@@ -22,3 +26,36 @@ h6{
 .copyright{
     margin-left: 40%;
 }
+
+.footer-mobile{
+    display: none;
+   
+}
+
+@media only screen and (max-width: 991px) {
+      
+    .footer-web{
+        display: none;
+       
+    }
+    .footer-mobile{
+        display: unset;
+       
+    }
+    
+    .button-text{
+        color: #ffffff;
+    }
+
+    .button-text:focus{
+        background-color: #000000;
+    }
+    .copyright{
+        margin-left: 5%;
+    }
+
+    .accordion-body{
+        background-color: #000000;
+        color: #ffffff;
+    }
+  }

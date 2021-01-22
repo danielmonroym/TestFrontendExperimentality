@@ -34,3 +34,35 @@
     margin-left: 30%;
   
 }
+
+      
+.mobileproducts{
+    display: none;
+   
+}
+@media only screen and (max-width: 991px) {
+      
+    .webproducts{
+        display: none;
+       
+    }
+
+    .mobileproducts{
+        display: unset;
+       
+    }
+    .img{
+        width: 100%;
+    }
+    .arrowleft{
+    
+     margin-top:35%;
+     
+    }
+
+    .arrowright{
+    
+        margin-top:35%;
+        
+       }
+  }

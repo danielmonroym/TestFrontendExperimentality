@@ -11,6 +11,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 })
 export class PopularproductsComponent implements OnInit {
   products: Products[]= [];
+  productsMobile: Products[]= [];
   randomSearchRight:any=["camisa","zapatos","boxer","pantalon", "gorra", "medias"];
   randomSearchLeft:any=["camisilla","chanclas","pantaloneta","sudadera", "chaqueta", "sweater"];
   img: any[]=[];
@@ -29,7 +30,9 @@ export class PopularproductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.products=[];
+    this.productsMobile=[];
     this.getProducts();
+   this.getProductsMobile();
   }
 
   getProducts():void{
@@ -39,6 +42,15 @@ export class PopularproductsComponent implements OnInit {
       this.products = data.results;
   
   });
+}
+
+getProductsMobile():void{
+  console.log(this.search);
+  this.productService.getPopularProductsMobile(this.search).subscribe((data) => {
+    console.log(data);
+    this.productsMobile = data.results;
+
+});
 }
 getRandomArbitrary(min, max):number {
   return Math.round(Math.random() * (max - min) + min);
@@ -66,6 +78,32 @@ getNextProducts():void{
    this.productService.getPopularProducts(this.search).subscribe((data) => {
      console.log(data);
      this.products = data.results;
+   
+ 
+ });
+ }
+
+ getPrevProductsMobile():void{
+  this.random=this.getRandomArbitrary(0,5);
+  console.log(this.random);
+  this.search=this.randomSearchRight[this.random];
+  console.log(this.search);
+   this.productService.getPopularProductsMobile(this.search).subscribe((data) => {
+     console.log(data);
+     this.productsMobile = data.results;
+   
+ 
+ });
+}
+
+getNextProductsMobile():void{
+  this.random=this.getRandomArbitrary(0,5);
+  console.log(this.random);
+  this.search=this.randomSearchLeft[this.random];
+  console.log(this.search);
+   this.productService.getPopularProductsMobile(this.search).subscribe((data) => {
+     console.log(data);
+     this.productsMobile = data.results;
    
  
  });
