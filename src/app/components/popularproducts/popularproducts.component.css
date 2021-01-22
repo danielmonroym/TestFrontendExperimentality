@@ -1,0 +1,36 @@
+.img{
+    width: 65%;
+}
+
+.card-style{
+    border:none;
+}
+
+.price{
+    color:#5B17AA;
+}
+
+.discount{
+    color:#6B6B6B;
+
+}
+.arrowleft{
+    color: #AEAEA9;
+    margin-left: 10%;
+ 
+}
+.arrowleft:hover{
+    color:#5B17AA;
+}
+.arrowright{
+    color: #AEAEA9;
+}
+
+.arrowright:hover{
+    color:#5B17AA;
+}
+
+.title{
+    margin-left: 30%;
+  
+}

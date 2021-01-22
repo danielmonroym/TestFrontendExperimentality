@@ -10,6 +10,7 @@ import { NewarrivalComponent } from './components/newarrival/newarrival.componen
 import { ImagesComponent } from './components/images/images.component';
 import { PopularproductsComponent } from './components/popularproducts/popularproducts.component';
 import { FooterComponent } from './components/footer/footer.component';
+import {  HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
