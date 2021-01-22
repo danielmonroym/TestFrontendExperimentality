@@ -5,3 +5,5 @@ export class Products {
     id: string;
     original_price: number;
 }
+
+// Model for product items

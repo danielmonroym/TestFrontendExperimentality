@@ -10,13 +10,20 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./popularproducts.component.css']
 })
 export class PopularproductsComponent implements OnInit {
+  //init products arrays
   products: Products[]= [];
   productsMobile: Products[]= [];
+
+  // random searchs for most popular products cards
   randomSearchRight:any=["camisa","zapatos","boxer","pantalon", "gorra", "medias"];
   randomSearchLeft:any=["camisilla","chanclas","pantaloneta","sudadera", "chaqueta", "sweater"];
-  img: any[]=[];
+
+  // Font awesome variables
+ 
   faArrowLeft=faArrowLeft;
   faArrowRight=faArrowRight; 
+
+  // Variables for control
   random:number=0;
   searchPrev:any="";
   search:any="buzo";
@@ -27,7 +34,7 @@ export class PopularproductsComponent implements OnInit {
   }
 
 
-
+// Reset variables on refresh or entering the page
   ngOnInit(): void {
     this.products=[];
     this.productsMobile=[];
@@ -35,6 +42,7 @@ export class PopularproductsComponent implements OnInit {
    this.getProductsMobile();
   }
 
+  // get data for popular products
   getProducts():void{
     console.log(this.search);
     this.productService.getPopularProducts(this.search).subscribe((data) => {
@@ -43,7 +51,7 @@ export class PopularproductsComponent implements OnInit {
   
   });
 }
-
+   // get data for popular products in mobile view
 getProductsMobile():void{
   console.log(this.search);
   this.productService.getPopularProductsMobile(this.search).subscribe((data) => {
@@ -52,11 +60,12 @@ getProductsMobile():void{
 
 });
 }
+// get random number to match array searching index
 getRandomArbitrary(min, max):number {
   return Math.round(Math.random() * (max - min) + min);
 }
 
-
+// get random products for web view
 getPrevProducts():void{
   this.random=this.getRandomArbitrary(0,5);
   console.log(this.random);
@@ -69,7 +78,7 @@ getPrevProducts():void{
  
  });
 }
-
+// get random products for web view
 getNextProducts():void{
   this.random=this.getRandomArbitrary(0,5);
   console.log(this.random);
@@ -82,7 +91,7 @@ getNextProducts():void{
  
  });
  }
-
+// get random products for mobile view
  getPrevProductsMobile():void{
   this.random=this.getRandomArbitrary(0,5);
   console.log(this.random);
@@ -95,7 +104,7 @@ getNextProducts():void{
  
  });
 }
-
+// get random products for mobile view
 getNextProductsMobile():void{
   this.random=this.getRandomArbitrary(0,5);
   console.log(this.random);
