@@ -1,0 +1,27 @@
+.card-img-top{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10%;
+}
+
+.card-title{
+    color: #6b6b6b;
+}
+
+.discount{
+    color:#6B6B6B;
+
+}
+.price{
+    color:#5B17AA;
+}
+.page-link{
+    color: #ffffff;
+    background-color: #000000;
+   
+
+}
+.card{
+    border-radius: 20px;
+    border:  #000000 1px solid;
+}

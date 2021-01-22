@@ -1,0 +1,54 @@
+<div class="container mb-5 mt-5">
+    <div class="row">
+
+            <button class="btn page-link col-3 offset-3" href="#"  [disabled]="disablePrev" (click)="getPrevProducts()"  >Previous</button>
+            <button class=" btn  page-link col-3 " [disabled]="disableNext" (click)="getNextProducts()">Next</button>
+
+    </div>
+
+       
+
+</div>
+<div class="container">
+    <div class="row mt-5">
+       
+        <div class="card col-4 ms-3 mt-5 mb-2" *ngFor="let product of products" style="width: 18rem;">
+            <img src="{{product.thumbnail}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h6 class="card-title">{{product.title}}</h6>
+              <div *ngIf="product.original_price != null; else templateName"> 
+              <p class="card-text text-muted discount" style="text-decoration: line-through;"> {{product.price | currency:'COP':'symbol-narrow'}}</p>
+              <p class="card-text price">{{product.original_price| currency:'COP':'symbol-narrow'}}</p>
+              <div class="container">
+                <a href="#" class="btn btn-dark ms-4 mt-5">Añadir carrito</a>
+              </div>
+             
+            </div>
+
+            <ng-template #templateName>
+                <p class="card-text price">
+                    {{ product.price | currency: "COP":"symbol-narrow" }}
+                    
+                  </p>
+                  <div class="container ">
+                    <a href="#" class="btn btn-dark ms-4 mt-5">Añadir carrito</a>
+                  </div>
+            </ng-template>
+
+            </div>
+          </div>
+        
+    </div>
+</div>
+
+<div class="container mb-5 mt-5">
+    <div class="row">
+
+            <button class="btn page-link col-3 offset-3" href="#"  [disabled]="disablePrev" (click)="getPrevProducts()"  >Previous</button>
+            <button class=" btn  page-link col-3 " [disabled]="disableNext" (click)="getNextProducts()">Next</button>
+
+    </div>
+
+       
+
+</div>

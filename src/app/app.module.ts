@@ -11,6 +11,9 @@ import { ImagesComponent } from './components/images/images.component';
 import { PopularproductsComponent } from './components/popularproducts/popularproducts.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {  HttpClientModule } from '@angular/common/http';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +23,16 @@ import {  HttpClientModule } from '@angular/common/http';
     NewarrivalComponent,
     ImagesComponent,
     PopularproductsComponent,
-    FooterComponent
+    FooterComponent,
+    ProductDetailsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
